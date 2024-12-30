@@ -14,7 +14,7 @@
     </div>
     <div class="card">
       <img src="./assets/blankcat.svg" alt="">
-      <p>add cat</p>
+      <h3>+ add more</h3>
     </div>
   </div>
 </template>
@@ -28,13 +28,25 @@ export default {
 <style scoped>
 h1, h2 {
   text-align: start;
+  margin: 50px;
+}
+
+h3, .card p{
+  margin: 0;
 }
 
 .cats-gallery {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 50px;
 }
 
-.cats-gallery .card:last-child img {
-  width: 444px;
+.card img {
+  max-width: 60%;
 }
+
+/* .cats-gallery .card:last-child img { */
+  /* width: 444px; */
+
+/* } */
 </style>
