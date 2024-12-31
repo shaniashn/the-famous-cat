@@ -33,8 +33,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+h2 {
+  text-align: center;
+}
+
 .preview-container {
+  width: 100%;
   text-align: start;
 }
 
