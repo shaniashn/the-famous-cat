@@ -1,5 +1,7 @@
 <template>
-  <h1>welcome, username!</h1>
+  <div class="dashboard">
+  <div class="welcome">
+    <h1>welcome, username!</h1>
   <h2>your cats</h2>
   <div class="cats-gallery">
     <div class="card">
@@ -17,11 +19,19 @@
       <h3>+ add more</h3>
     </div>
   </div>
+  </div>
+  <PreviewPage />
+  </div>
 </template>
 
 <script>
+import PreviewPage from './PreviewCat.vue';
+
 export default {
-  name: 'AllCats'
+  name: 'AllCats',
+  components: {
+    PreviewPage
+  }
 }
 </script>
 
@@ -45,8 +55,7 @@ h3, .card p{
   max-width: 60%;
 }
 
-/* .cats-gallery .card:last-child img { */
-  /* width: 444px; */
-
-/* } */
+.dashboard {
+  display: flex;
+}
 </style>

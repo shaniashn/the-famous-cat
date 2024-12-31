@@ -8,9 +8,9 @@
   <div class="cta">
     <router-link to="/all-cats">see all cats!</router-link>
   </div>
-  <div class="cta">
+  <!-- <div class="cta">
     <router-link to="/preview-cat">preview cat</router-link>
-  </div>
+  </div> -->
 </template>
 
 <script>
