@@ -13,12 +13,29 @@
       <label for="hates">hates</label>
       <input type="text" id="hates">
     </form>
+    <div class="image">
+      <img @click="logFile()" src="./assets/blankcat.svg">
+      <label for="input-file">upload picture</label>
+      <input id="input-file" type="file" accept=".png, .jpeg, .jpg, .svg">
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CatForm'
+  name: 'CatForm',
+  data() {
+    return {
+
+    }
+  },
+  methods: {
+    logFile(){
+      const files = document.getElementById('input-file').files;
+      console.log("files ", files);
+      
+    }
+  }
 }
 </script>
 
