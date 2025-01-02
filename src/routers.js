@@ -1,6 +1,7 @@
 import HomePage from './HomePage.vue';
 import SignUp from './SignUp.vue';
 import AllCats from './AllCats.vue';
+import CatForm from './CatForm.vue';
 // import PreviewCat from './PreviewCat.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -20,6 +21,11 @@ const routes = [
     component: AllCats,
     path: '/all-cats'
   },
+  {
+    name: 'CatForm',
+    component: CatForm,
+    path: '/add-new'
+  }
   // {
   //   name: 'PreviewCat',
   //   component: PreviewCat,
