@@ -1,7 +1,8 @@
 <template>
+  <h1>add new cat</h1>
   <div class="form-cat">
-    <h1>add new cat</h1>
-    <div class="form"><form action="">
+    <div class="form">
+      <form action="">
       <label for="name">name</label>
       <input type="text" id="name">
       <label for="age">age</label>
@@ -12,7 +13,8 @@
       <input type="text" id="gender">
       <label for="hobby">hobby</label>
       <input type="text" id="hobby">
-    </form></div>
+    </form>
+  </div>
     <div class="image">
       <img @click="logFile()" src="./assets/blankcat.svg">
       <label for="input-file">upload picture</label>
@@ -31,22 +33,34 @@ export default {
   },
   methods: {
     logFile(){
+      
       const files = document.getElementById('input-file').files;
       console.log("files ", files);
+      const img = document.getElementsByTagName('img')[0];
+      img.src = URL.createObjectURL(files[0]);
       
     }
   }
 }
 </script>
 
-<style>
-form {
-  flex-direction: column;
+<style scoped>
+.form-cat {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  margin-bottom: 10%;
 }
 
 label,
 input {
   display: block;
   text-align: start;
+}
+
+.image {
+  max-width: 20%;
 }
 </style>
