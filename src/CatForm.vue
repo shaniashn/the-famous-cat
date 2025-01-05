@@ -3,16 +3,16 @@
   <div class="form-cat">
     <div class="form">
       <form action="">
-      <label for="name">name</label>
-      <input type="text" id="name">
-      <label for="age">age</label>
-      <input type="text" id="age">
-      <label for="breed">breed</label>
-      <input type="text" id="breed">
-      <label for="gender">gender</label>
-      <input type="text" id="gender">
-      <label for="hobby">hobby</label>
-      <input type="text" id="hobby">
+      <label for="name">name of your cat</label>
+      <input type="text" id="name" placeholder="jello">
+      <label for="age">age of your cat</label>
+      <input type="text" id="age" placeholder="5">
+      <label for="breed">breed of your cat</label>
+      <input type="text" id="breed" placeholder="persian">
+      <label for="gender">gender of your cat</label>
+      <input type="text" id="gender" placeholder="female">
+      <label for="hobby">hobby of your cat</label>
+      <input type="text" id="hobby" placeholder="plays with grandma's knit kit">
     </form>
   </div>
     <div class="image">
