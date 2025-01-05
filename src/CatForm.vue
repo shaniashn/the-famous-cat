@@ -33,7 +33,6 @@ export default {
   },
   methods: {
     logFile(){
-      
       const files = document.getElementById('input-file').files;
       console.log("files ", files);
       const img = document.getElementsByTagName('img')[0];
@@ -50,6 +49,17 @@ export default {
   justify-content: space-around;
 }
 
+.form {
+  container-name: form;
+  width: 200px;
+}
+
+@container form (width > 100px) {
+  input::placeholder {
+    color: blue;
+  }
+}
+
 h1 {
   margin-bottom: 10%;
 }
@@ -58,6 +68,17 @@ label,
 input {
   display: block;
   text-align: start;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  margin-bottom: 15px;
+  min-height: 40px;
+  min-width: 100%;
+  
 }
 
 .image {
