@@ -2,6 +2,7 @@ import HomePage from './HomePage.vue';
 import SignUp from './SignUp.vue';
 import AllCats from './AllCats.vue';
 import CatForm from './CatForm.vue';
+import FeedsPost from './FeedsPost.vue';
 // import PreviewCat from './PreviewCat.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -25,7 +26,12 @@ const routes = [
     name: 'CatForm',
     component: CatForm,
     path: '/add-new'
-  }
+  },
+  {
+    name: 'FeedsPost',
+    component: FeedsPost,
+    path: '/add-new'
+  },
   // {
   //   name: 'PreviewCat',
   //   component: PreviewCat,
