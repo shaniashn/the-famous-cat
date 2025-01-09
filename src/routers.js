@@ -30,7 +30,7 @@ const routes = [
   {
     name: 'FeedsPost',
     component: FeedsPost,
-    path: '/add-new'
+    path: '/feeds'
   },
   // {
   //   name: 'PreviewCat',
