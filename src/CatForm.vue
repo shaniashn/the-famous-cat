@@ -2,11 +2,6 @@
   <h1>add new cat</h1>
   <div class="form-cat">
     <div class="form">
-      <div class="image">
-        <img @click="logFile()" src="./assets/blankcat.svg">
-        <label for="input-file">upload picture</label>
-        <input id="input-file" type="file" accept=".png, .jpeg, .jpg, .svg">
-      </div>
       <form @submit.prevent="postForm">
         <label for="name">name of your cat</label>
         <input type="text" id="name" placeholder="jello">
@@ -19,6 +14,11 @@
         <label for="hobby">hobby of your cat</label>
         <input type="text" id="hobby" placeholder="plays with grandma's knit kit">
       </form>
+      <div class="image">
+        <img @click="logFile()" src="./assets/blankcat.svg">
+        <label for="input-file">upload picture</label>
+        <input id="input-file" type="file" accept=".png, .jpeg, .jpg, .svg">
+      </div>
       
     </div>
     <button type="submit">save</button>
@@ -51,9 +51,8 @@ export default {
 <style scoped>
 .form-cat {
   /* display: flex;
-  justify-content: space-around; */
+  justify-content: center; */
   display: grid;
-  justify-content: center;
 }
 
 .form-cat button {
@@ -62,7 +61,9 @@ export default {
 
 .form {
   container-name: form;
-  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
 }
 
 @container form (width > 100px) {
