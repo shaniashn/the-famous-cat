@@ -1,5 +1,6 @@
 <template>
-  <h1>add new cat</h1>
+  <div class="add-catform">
+    <h1>add new cat</h1>
   <div class="form-cat">
     <div class="form">
       <form @submit.prevent="postForm">
@@ -19,9 +20,9 @@
         <label for="input-file">upload picture</label>
         <input id="input-file" type="file" accept=".png, .jpeg, .jpg, .svg">
       </div>
-      
     </div>
     <button type="submit">save</button>
+  </div>
   </div>
 </template>
 
@@ -49,21 +50,32 @@ export default {
 </script>
 
 <style scoped>
-.form-cat {
+h1 {
+  text-align: start;
+}
+
+.add-catform {
+  padding: 5%;
+}
+
+/* .form-cat { */
   /* display: flex;
   justify-content: center; */
-  display: grid;
-}
+  /* display: grid; */
+/* } */
 
 .form-cat button {
   justify-self: center;
 }
 
 .form {
-  container-name: form;
+  /* container-name: form;
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 50%; */
+  gap: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 @container form (width > 100px) {
@@ -93,7 +105,8 @@ input {
   
 }
 
-/* .image {
-  min-width: 100%;
-} */
+.image {
+  max-width: 50%;
+  justify-self: center;
+}
 </style>
