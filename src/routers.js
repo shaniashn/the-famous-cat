@@ -1,8 +1,8 @@
 import HomePage from './HomePage.vue';
 import SignUp from './SignUp.vue';
 import AllCats from './AllCats.vue';
-import CatForm from './CatForm.vue';
-import FeedsPost from './FeedsPost.vue';
+import AddCat from './AddCat.vue';
+import FeedsPage from './FeedsPage.vue';
 // import PreviewCat from './PreviewCat.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -23,20 +23,15 @@ const routes = [
     path: '/all-cats'
   },
   {
-    name: 'CatForm',
-    component: CatForm,
+    name: 'AddCat',
+    component: AddCat,
     path: '/add-new'
   },
   {
-    name: 'FeedsPost',
-    component: FeedsPost,
+    name: 'FeedsPage',
+    component: FeedsPage,
     path: '/feeds'
   },
-  // {
-  //   name: 'PreviewCat',
-  //   component: PreviewCat,
-  //   path: '/preview-cat'
-  // },
 ]
 
 const router = createRouter({
