@@ -9,6 +9,10 @@ export default {
 </script>
 
 <style>
+/* colors
+898989 gray line
+*/
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -31,5 +35,9 @@ ul {
 
 li {
   list-style: none;
+}
+
+p {
+  margin: 0;
 }
 </style>
