@@ -95,7 +95,7 @@ input {
 }
 
 label {
-  margin-bottom: 5px;
+  margin: 10px 0;
 }
 
 input {
@@ -108,5 +108,9 @@ input {
 .image {
   max-width: 50%;
   justify-self: center;
+}
+
+.image img {
+  margin-bottom: 25x;
 }
 </style>
