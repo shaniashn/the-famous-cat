@@ -5,7 +5,8 @@
     <div class="preview-data">
       <h5>information</h5>
       <table class="table-info">
-        <tr>
+        <tbody>
+          <tr>
           <td ><p>age</p></td>
           <td><span>:</span></td>
         </tr>
@@ -21,6 +22,7 @@
           <td><p>hates</p></td>
           <td><span>:</span></td>
         </tr>
+        </tbody>
       </table>
     </div>
     <span>see activities</span>
