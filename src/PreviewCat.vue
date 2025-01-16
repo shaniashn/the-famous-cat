@@ -33,7 +33,7 @@
       </table>
     </div>
     <div class="btn-see-activity">
-      <button>see activity</button>
+      <button><router-link to="/feeds">see activity</router-link></button>
     </div>
   </div>
 </template>
