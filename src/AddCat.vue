@@ -22,6 +22,7 @@
       </div>
     </div>
     <button type="submit">save</button>
+    
   </div>
   </div>
 </template>
@@ -57,12 +58,6 @@ h1 {
 .add-catform {
   padding: 5%;
 }
-
-/* .form-cat { */
-  /* display: flex;
-  justify-content: center; */
-  /* display: grid; */
-/* } */
 
 .form-cat button {
   justify-self: center;
