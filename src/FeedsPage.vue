@@ -1,38 +1,26 @@
 <template>
-  <div class="feeds">
-    <h1>feeds</h1>
-    <div class="container">
-      <input type="text" placeholder="title">
-      <textarea name="" id="" rows="10">text</textarea>
-      <button>post</button>
-    </div>
+  <div class="feeds-wrapper">
+    <MenuComponent />
+    <PostsView />
   </div>
 </template>
 
 <script>
-export default {
-  name: 'FeedsPost',
-  data(){
-    return {
+import MenuComponent from './MenuComponent.vue';
+import PostsView from './PostsView.vue';
 
-    }
+export default {
+  name: 'FeedsPage',
+  components: {
+    PostsView,
+    MenuComponent
   }
 }
 </script>
 
 <style scoped>
-.feeds{
-  display: grid;
+.feeds-wrapper {
+  display: flex;
 }
 
-.container {
-  height: auto;
-  max-width: 100%;
-  width: 90%;
-  display: grid;
-  justify-self: center;
-  border: 2px solid black;
-  padding: 15px;
-  gap: 10px;
-}
 </style>
