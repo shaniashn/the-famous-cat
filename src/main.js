@@ -9,4 +9,4 @@ import { faHeart as farHeart } from "@fortawesome/free-regular-svg-icons";
 library.add({ faTrophy, fasHeart, farHeart });
 
 
-createApp(App).component('font-awesome-icon', FontAwesomeIcon).use(router).mount('#app')
+createApp(App).component('font-awesome-icon', FontAwesomeIcon).use(router).mount('#app');
