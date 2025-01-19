@@ -6,14 +6,16 @@
         <span>popular</span>
         <span>my posts</span>
       </div>
-      <!-- <div class="container">
-        <input type="text" placeholder="title">
-        <textarea name="" id="" rows="10">text</textarea>
-        <button>post</button>
-      </div> -->
-      <div class="post-preview">
+      <div class="newpost-container hidden">
+        <div class="new-post">
+          <input type="text" placeholder="title">
+          <textarea name="" id="" rows="10"></textarea>
+          <button>post</button>
+        </div>
+      </div>
         <span>what are your cats doing now?</span>
       </div>
+      
       <div class="post">
         <div class="post-profile">
           <a href="">username</a>
@@ -35,6 +37,8 @@
 </template>
 
 <script>
+// import { watch } from 'vue';
+
 
 export default {
   name: 'PostsView',
@@ -43,7 +47,6 @@ export default {
 
 <style scoped>
 .feeds h1 {
-  /* margin: 50px; */
   text-align: start;
 }
 
@@ -62,16 +65,54 @@ export default {
   font-weight: 600;
 }
 
-/* .container {
+.new-post {
   height: auto;
-  max-width: 100%;
-  width: 90%;
+  max-width: 90%;
+  width: 50%;
   display: grid;
   justify-self: center;
-  border: 2px solid black;
-  padding: 15px;
+  border: 0.5px solid #898989;
+  padding: 25px;
   gap: 10px;
-} */
+  position: fixed;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.new-post input {
+  padding: 10px;
+  margin-top: 15px;
+  border: 0.5px solid #898989;
+  border-radius: 5px;
+}
+
+.new-post textarea {
+  padding: 10px;
+  margin: 15px 0;
+  border: 0.5px solid #898989;
+  border-radius: 5px;
+  resize: none;
+}
+
+.new-post button {
+  height: 40px;
+  margin-bottom: 15px;
+  border: 0.5px solid #898989;
+  border-radius: 5px;
+}
+
+.newpost-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(231, 231, 231, 0.4);
+}
+
+.newpost-container.hidden {
+  display: none;
+}
 
  .post-preview {
   padding: 25px;
@@ -92,15 +133,18 @@ export default {
 
  .post a {
   text-decoration: none;
+  font-weight: 600;
  }
 
  .post-reaction {
   padding: 4px 8px;
-  border: 0.5px solid #898989;
+  border: 0.5px solid #a2a2a2;
   width: fit-content;
   border-radius: 75pt;
   display: flex;
   justify-content: center;
   align-items: center;
  }
+
+
 </style>
