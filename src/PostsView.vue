@@ -13,6 +13,7 @@
           <button>post</button>
         </div>
       </div>
+      <div class="post-preview">
         <span>what are your cats doing now?</span>
       </div>
       
@@ -42,6 +43,26 @@
 
 export default {
   name: 'PostsView',
+  data() {
+    return {
+      // isAnimating: false
+    }
+  },
+  methods: {
+    // setBlinkAnim(){
+    //   this.isAnimating = true;
+    //   setTimeout(() => {
+    //     this.isAnimating = false;
+    //   }, 100)
+    // },
+  },
+  // watch: {
+  //   clicked(newValue){
+  //     if (newValue) {
+        
+  //     }
+  //   }
+  // }
 }
 </script>
 
@@ -120,6 +141,10 @@ export default {
   border-radius: 5px;
   display: flex;
  }
+
+.post-preview:active {
+  background-color: #e4e4e4;
+}
 
  .post {
   padding: 25px;
