@@ -6,14 +6,18 @@
         <span>popular</span>
         <span>my posts</span>
       </div>
-      <div class="newpost-container hidden">
+       <div class="newpost-container" v-show="hideNewPost">
         <div class="new-post">
+          <div class="close-mark">
+            <!-- <span>create post</span> -->
+            <span @click="hideContainer"><font-awesome-icon icon="fa-solid fa-xmark" /></span>
+          </div>
           <input type="text" placeholder="title">
           <textarea name="" id="" rows="10"></textarea>
           <button>post</button>
         </div>
       </div>
-      <div class="post-preview">
+      <div class="post-preview" @click="showContainer">
         <span>what are your cats doing now?</span>
       </div>
       
@@ -38,30 +42,28 @@
 </template>
 
 <script>
-// import { watch } from 'vue';
-
-
 export default {
   name: 'PostsView',
   data() {
     return {
-      // isAnimating: false
+      hideNewPost: true,
     }
   },
   methods: {
-    // setBlinkAnim(){
-    //   this.isAnimating = true;
-    //   setTimeout(() => {
-    //     this.isAnimating = false;
-    //   }, 100)
-    // },
+    hideContainer(){
+      this.hideNewPost = false
+    },
+    showContainer(){
+      this.hideNewPost = true
+    }
+
   },
   // watch: {
-  //   clicked(newValue){
-  //     if (newValue) {
+    // func(newValue){
+    //   if (newValue) {
         
-  //     }
-  //   }
+    //   }
+    // }
   // }
 }
 </script>
@@ -118,8 +120,12 @@ export default {
 .new-post button {
   height: 40px;
   margin-bottom: 15px;
-  border: 0.5px solid #898989;
+  border: none;
   border-radius: 5px;
+}
+
+.new-post button:active {
+  background-color: #e4e3e3;
 }
 
 .newpost-container {
@@ -128,14 +134,41 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(231, 231, 231, 0.4);
+  background-color: rgba(242, 242, 242, 0.8);
+  display: grid;
+  align-items: center;
+  /* margin: auto; */
 }
 
 .newpost-container.hidden {
   display: none;
 }
 
- .post-preview {
+.close-mark {
+  margin: 10px;
+  /* display: grid; */
+  /* justify-content: center; */
+  display: flex;
+  justify-content: end;
+  grid-auto-rows: 1fr;
+}
+
+.close-mark span {
+  padding: 10px;
+  background-color: #e4e4e4;
+  border-radius: 75pt;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-mark span:active {
+  background-color: #d9d9d9;
+}
+
+.post-preview {
   padding: 25px;
   border: 0.5px solid #898989;
   border-radius: 5px;
