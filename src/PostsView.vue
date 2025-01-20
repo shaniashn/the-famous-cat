@@ -22,16 +22,16 @@
       <div class="post-preview" @click="showContainer">
         <span>what are your cats doing now?</span>
       </div>
-      
-      <div class="post">
+
+      <div class="post" v-for="post in posts" :key="post">
         <div class="post-profile">
-          <a href="">username</a>
+          <a href="">{{ post.username }}</a>
         </div>
         <div class="post-title">
-          <p>hello, this is jiggy</p>
+          <p>{{ post.title }}</p>
         </div>
         <div class="post-desc">
-          <p>my cat's name is jiggy. you may see her as fat but actually what caused it was because when she was 1 month, her old owner thrown her out of moving car (that's cruel i know) but we saved her and because of it there's trauma in her brain makes she can't grow properly and suffer from dwarfism.</p>
+          <p>{{ post.desc }}</p>
         </div>
         <div class="post-image"></div>
         <div class="post-reaction">
@@ -49,6 +49,16 @@ export default {
   data() {
     return {
       hideNewPost: false,
+      posts: [
+        {
+          username: 'xiaopang',
+          title: 'hello, this is jiggy',
+          desc: "my cat's name is jiggy. you may see her as fat but actually what caused it was because when she was 1 month, her old owner thrown her out of moving car (that's cruel i know) but we saved her and because of it there's trauma in her brain makes she can't grow properly and suffer from dwarfism.",
+        }
+      ],
+      username: 'xiaopang',
+      title: '',
+      desc: ''
     }
   },
   methods: {
