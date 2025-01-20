@@ -3,9 +3,11 @@
     <img src="./assets/cats/rawr-cat.png" alt="profile-image">
     <h3>shane</h3>
     <span>@shanshine</span>
-    <!-- <span><router-link>my cats</router-link></span>
-  <span><router-link>ranks</router-link></span>
-  <span><router-link>media</router-link></span> -->
+    <div class="menu-opt">
+      <a><router-link to="/all-cats">my cats</router-link></a>
+      <a href="">ranks</a>
+      <a href="">media</a>
+    </div>
   </div>
 </template>
 
