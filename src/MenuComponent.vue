@@ -31,6 +31,15 @@ export default {
 </script>
 
 <style scoped>
+h3 {
+  margin: 5px 0;
+}
+
+.menu-wrapper.hide {
+  transform: translateX(-150%);
+  display: none;
+}
+
 .menu-wrapper {
   width: 50%;
   margin: 4% 0;
@@ -40,5 +49,18 @@ export default {
 
 .menu-wrapper img {
   max-width: 30%;
+}
+
+.menu-opt {
+  display: grid;
+  margin: 25% 15%;
+  gap: 40%;
+  justify-items: start;
+}
+
+.menu-opt a {
+  font-weight: 500;
+  color: #2c3e50;
+  text-decoration: none
 }
 </style>
