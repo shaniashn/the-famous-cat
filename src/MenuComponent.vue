@@ -12,6 +12,19 @@
 <script>
 export default {
   name: 'MenuComponent',
+  data() {
+    return {
+      hideMenu: true,
+    }
+  },
+  methods: {
+    hideContainer(){
+      this.hideMenu = false
+    },
+    showContainer(){
+      this.hideMenu = true
+    },
+  }
 }
 </script>
 
