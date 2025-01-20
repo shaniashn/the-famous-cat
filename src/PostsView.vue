@@ -66,9 +66,11 @@ export default {
   methods: {
     hideContainer(){
       this.hideNewPost = false
+      document.body.style.position = "static";
     },
     showContainer(){
       this.hideNewPost = true
+      document.body.style.position = "fixed";
     },
     addPost(){
       const username = this.username
