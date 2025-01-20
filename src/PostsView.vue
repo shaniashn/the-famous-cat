@@ -12,9 +12,11 @@
           <div class="close-mark">
             <span @click="hideContainer"><font-awesome-icon icon="fa-solid fa-xmark" /></span>
           </div>
-          <input type="text" placeholder="title">
-          <textarea name="" id="" rows="10"></textarea>
-          <button>post</button>
+          <form @submit.prevent="addPost">
+            <input type="text" placeholder="title" v-model="title">
+            <textarea name="" id="" rows="10" v-model="desc"></textarea>
+            <button type="submit">post</button>
+          </form>
         </div>
       </div>
       <!-- new post -->
@@ -128,6 +130,10 @@ export default {
   position: fixed;
   background-color: #ffffff;
   border-radius: 5px;
+}
+
+.new-post form {
+  display: grid;
 }
 
 .new-post input {
