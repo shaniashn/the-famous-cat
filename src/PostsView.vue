@@ -67,6 +67,22 @@ export default {
     },
     showContainer(){
       this.hideNewPost = true
+    },
+    addPost(){
+      const username = this.username
+      const title = this.title
+      const desc = this.desc
+
+      const newPost = {
+        username: username, 
+        title: title, 
+        desc: desc
+      }
+
+      this.posts.push(newPost)
+      this.title = ''
+      this.desc = ''
+      this.hideContainer()
     }
 
   },
