@@ -6,10 +6,10 @@
         <span>popular</span>
         <span>my posts</span>
       </div>
-       <div class="newpost-container" v-show="hideNewPost">
+      <!-- new post -->
+      <div class="newpost-container" v-show="hideNewPost">
         <div class="new-post">
           <div class="close-mark">
-            <!-- <span>create post</span> -->
             <span @click="hideContainer"><font-awesome-icon icon="fa-solid fa-xmark" /></span>
           </div>
           <input type="text" placeholder="title">
@@ -17,6 +17,8 @@
           <button>post</button>
         </div>
       </div>
+      <!-- new post -->
+      <!-- feeds -->
       <div class="post-preview" @click="showContainer">
         <span>what are your cats doing now?</span>
       </div>
@@ -46,7 +48,7 @@ export default {
   name: 'PostsView',
   data() {
     return {
-      hideNewPost: true,
+      hideNewPost: false,
     }
   },
   methods: {
