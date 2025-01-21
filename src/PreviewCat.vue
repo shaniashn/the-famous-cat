@@ -33,7 +33,7 @@
       </table>
     </div>
     <div class="btn-see-activity">
-      <button><router-link to="/feeds">see activity</router-link></button>
+      <button type="button"><router-link to="/feeds">see activity</router-link></button>
     </div>
   </div>
 </template>
@@ -89,6 +89,19 @@ td:nth-child(2) {
 
 .btn-see-activity {
   margin: auto;
+}
+
+.btn-see-activity button {
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  background-color: #e4e3e3;
+}
+
+.btn-see-activity button a{
+  text-decoration: none;
+  color: #2c3e50;
 }
 
 /* .preview-container {
