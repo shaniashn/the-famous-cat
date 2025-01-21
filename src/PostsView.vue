@@ -164,6 +164,10 @@ export default {
   background-color: #e4e3e3;
 }
 
+.new-post button:hover {
+  cursor: pointer;
+}
+
 .newpost-container {
   position: absolute;
   top: 0;
@@ -239,6 +243,4 @@ export default {
   justify-content: center;
   align-items: center;
  }
-
-
 </style>
