@@ -64,10 +64,6 @@ h1 {
 }
 
 .form {
-  /* container-name: form;
-  display: flex;
-  justify-content: space-between;
-  width: 50%; */
   gap: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -107,5 +103,21 @@ input {
 
 .image img {
   margin-bottom: 25x;
+}
+
+.form-cat button {
+  width: 150px;
+  height: 40px;
+  margin: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-cat button:active {
+  background-color: #e4e3e3;
+}
+
+.form-cat button:hover {
+  cursor: pointer;
 }
 </style>
