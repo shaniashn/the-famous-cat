@@ -104,7 +104,11 @@ td:nth-child(2) {
   color: #2c3e50;
 }
 
-/* .preview-container {
-  opacity: 0;
-} */
+.btn-see-activity button:active {
+  background-color: #e4e3e3;
+}
+
+.btn-see-activity button:hover {
+  cursor: pointer;
+}
 </style>
