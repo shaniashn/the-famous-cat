@@ -11,22 +11,18 @@
         <tbody>
           <tr>
           <td><p>age</p></td>
-          <!-- <td><span>:</span></td> -->
           <td>0</td>
         </tr>
         <tr>
           <td><p>breed</p></td>
-          <!-- <td><span>:</span></td> -->
           <td>domestic</td>
         </tr>
         <tr>
           <td><p>hobby</p></td>
-          <!-- <td><span>:</span></td> -->
           <td>knead dough</td>
         </tr>
         <tr>
           <td><p>hates</p></td>
-          <!-- <td><span>:</span></td> -->
           <td>vet and syringe</td>
         </tr>
         </tbody>
