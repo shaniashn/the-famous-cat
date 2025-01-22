@@ -95,7 +95,7 @@ h1 {
 }
 
 h1 {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 label,
