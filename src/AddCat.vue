@@ -3,17 +3,18 @@
     <h1>add new cat</h1>
   <div class="form-cat">
     <div class="form">
-      <form @submit.prevent="postForm">
+      <form @submit.prevent="postForm()">
         <label for="name">name of your cat</label>
-        <input type="text" id="name" placeholder="jello">
+        <input v-model="catName" type="text" id="name" placeholder="jello">
         <label for="age">age of your cat</label>
-        <input type="text" id="age" placeholder="5">
+        <input v-model="catAge" type="text" id="age" placeholder="5">
         <label for="breed">breed of your cat</label>
-        <input type="text" id="breed" placeholder="persian">
+        <input v-model="catBreed" type="text" id="breed" placeholder="persian">
         <label for="gender">gender of your cat</label>
-        <input type="text" id="gender" placeholder="female">
+        <input v-model="catGender" type="text" id="gender" placeholder="female">
         <label for="hobby">hobby of your cat</label>
-        <input type="text" id="hobby" placeholder="plays with grandma's knit kit">
+        <input v-model="catHobby" type="text" id="hobby" placeholder="plays with grandma's knit kit">
+        <button type="submit">save</button>
       </form>
       <div class="image">
         <img @click="logFile()" src="./assets/blankcat.svg">
@@ -21,7 +22,7 @@
         <input id="input-file" type="file" accept=".png, .jpeg, .jpg, .svg">
       </div>
     </div>
-    <button type="submit">save</button>
+    
     
   </div>
   </div>
@@ -32,7 +33,12 @@ export default {
   name: 'CatForm',
   data() {
     return {
-
+      catName: '',
+      catAge: '',
+      catBreed: '',
+      catGender: '',
+      catHobby: '',
+      cats: [],
     }
   },
   methods: {
@@ -44,7 +50,20 @@ export default {
       
     },
     postForm(){
-
+      let cat = {
+        name: this.catName,
+        age: this.catAge,
+        breed: this.catBreed,
+        gender: this.catGender,
+        hobby: this.catHobby,
+      }
+      this.cats.push(cat)
+      console.log(this.cats);
+      this.catName = ''
+      this.catAge = ''
+      this.catBreed = ''
+      this.catGender = ''
+      this.catHobby = ''
     }
   }
 }
