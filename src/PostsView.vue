@@ -12,7 +12,7 @@
           <div class="close-mark">
             <span @click="hideContainer"><font-awesome-icon icon="fa-solid fa-xmark" /></span>
           </div>
-          <form @submit.prevent="addPost">
+          <form @submit.prevent="getData">
             <input type="text" placeholder="title" v-model="title">
             <textarea name="" id="" rows="10" v-model="desc"></textarea>
             <button type="submit">post</button>
@@ -21,7 +21,7 @@
       </div>
       <!-- new post -->
       <!-- feeds showContainer -->
-      <div class="post-preview" @click="getData">
+      <div class="post-preview" @click="showContainer">
         <span>what are your cats doing now?</span>
       </div>
 
@@ -51,14 +51,8 @@ export default {
   data() {
     return {
       hideNewPost: false,
-      posts: [
-        {
-          username: 'xiaopang',
-          title: 'hello, this is jiggy',
-          desc: "my cat's name is jiggy. you may see her as fat but actually what caused it was because when she was 1 month, her old owner thrown her out of moving car (that's cruel i know) but we saved her and because of it there's trauma in her brain makes she can't grow properly and suffer from dwarfism.",
-        }
-      ],
-      username: 'xiaopang',
+      posts: [],
+      username: '',
       title: '',
       desc: ''
     }
@@ -84,6 +78,9 @@ export default {
       }
 
       this.posts.push(newPost)
+      console.log(this.posts);
+      
+      this.username = ''
       this.title = ''
       this.desc = ''
       this.hideContainer()
@@ -108,14 +105,20 @@ export default {
     async getData() {
       const data = await this.fetchData();
       for (let index = 0; index < data.length; index++) {
-        const element = data[index];
-        console.log(element);
-        
-        
+
+        // this.username = data[index].name
+        // this.title = data[index].title
+        // this.desc = data[index].desc
+
+        let cat = data[index]
+        this.posts.push(cat)
       }
       
     }
   },
+  mounted: {
+    
+  }
 }
 </script>
 
