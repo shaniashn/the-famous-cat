@@ -64,21 +64,6 @@ export default {
       this.catBreed = ''
       this.catGender = ''
       this.catHobby = ''
-
-      //fetch data
-      async function fetchData() {
-        const URL = "http://localhost:3000/catProfile"
-        const fetchedData = await fetch(URL);
-        console.log(fetchedData);
-
-        if (fetchedData.status != 200) {
-          throw new Error("Data fetching error.");
-          
-        }
-
-      }
-
-      fetchData()
     }
   }
 }
