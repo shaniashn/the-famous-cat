@@ -20,8 +20,8 @@
         </div>
       </div>
       <!-- new post -->
-      <!-- feeds -->
-      <div class="post-preview" @click="showContainer">
+      <!-- feeds showContainer -->
+      <div class="post-preview" @click="getData">
         <span>what are your cats doing now?</span>
       </div>
 
@@ -87,16 +87,35 @@ export default {
       this.title = ''
       this.desc = ''
       this.hideContainer()
-    }
+    },
+    async fetchData() {
+        const URL = "http://localhost:3000/catProfile"
+        let fetchedData = await fetch(URL);
+        console.log(fetchedData);
 
-  },
-  // watch: {
-    // func(newValue){
-    //   if (newValue) {
+        let x = fetch(URL).then((res) => {
+          return res.json()
+        }).then(data => {
+          return data
+        })
+
+        if (fetchedData.status != 200) {
+          throw new Error("Data fetching error.");
+        }
+
+        return x;
+    },
+    async getData() {
+      const data = await this.fetchData();
+      for (let index = 0; index < data.length; index++) {
+        const element = data[index];
+        console.log(element);
         
-    //   }
-    // }
-  // }
+        
+      }
+      
+    }
+  },
 }
 </script>
 
