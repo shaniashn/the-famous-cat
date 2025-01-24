@@ -144,6 +144,8 @@ export default {
   position: fixed;
   background-color: #ffffff;
   border-radius: 5px;
+  position: relative;
+  top: 25vh;
 }
 
 .new-post form {
@@ -187,8 +189,8 @@ export default {
   left: 0;
   right: 0;
   background-color: rgba(242, 242, 242, 0.8);
-  display: grid;
-  align-items: center;
+  /* display: grid;
+  align-items: center; */
   /* margin: auto; */
 }
 
