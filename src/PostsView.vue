@@ -12,7 +12,7 @@
           <div class="close-mark">
             <span @click="hideContainer"><font-awesome-icon icon="fa-solid fa-xmark" /></span>
           </div>
-          <form @submit.prevent="getData">
+          <form @submit.prevent="addPost">
             <input type="text" placeholder="title" v-model="title">
             <textarea name="" id="" rows="10" v-model="desc"></textarea>
             <button type="submit">post</button>
@@ -52,7 +52,7 @@ export default {
     return {
       hideNewPost: false,
       posts: [],
-      username: '',
+      username: 'jegie',
       title: '',
       desc: ''
     }
@@ -86,38 +86,28 @@ export default {
       this.hideContainer()
     },
     async fetchData() {
-        const URL = "http://localhost:3000/catProfile"
+        const URL = "http://localhost:3000/posts"
         let fetchedData = await fetch(URL);
-        console.log(fetchedData);
 
-        let x = fetch(URL).then((res) => {
-          return res.json()
-        }).then(data => {
-          return data
-        })
+        fetch(URL).then((res) => res.json()).then((data) => console.log(data))
 
         if (fetchedData.status != 200) {
           throw new Error("Data fetching error.");
         }
 
-        return x;
+        return fetchedData.json();
     },
     async getData() {
       const data = await this.fetchData();
+      console.log("fetched from getData", data);
+
       for (let index = 0; index < data.length; index++) {
-
-        // this.username = data[index].name
-        // this.title = data[index].title
-        // this.desc = data[index].desc
-
-        let cat = data[index]
-        this.posts.push(cat)
+        this.posts.push(data[index])
       }
-      
-    }
+    },
   },
-  mounted: {
-    
+  mounted() {
+    this.getData()
   }
 }
 </script>
