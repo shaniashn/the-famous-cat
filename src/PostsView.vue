@@ -12,7 +12,7 @@
           <div class="close-mark">
             <span @click="hideContainer"><font-awesome-icon icon="fa-solid fa-xmark" /></span>
           </div>
-          <form @submit.prevent="addPost">
+          <form @submit="addPost">
             <input type="text" placeholder="title" v-model="title">
             <textarea name="" id="" rows="10" v-model="desc"></textarea>
             <button type="submit">post</button>
