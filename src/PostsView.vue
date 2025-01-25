@@ -66,6 +66,25 @@ export default {
       this.hideNewPost = true
       document.body.style.position = "fixed";
     },
+    // addPost(){
+    //   const username = this.username
+    //   const title = this.title
+    //   const desc = this.desc
+
+    //   const newPost = {
+    //     username: username, 
+    //     title: title, 
+    //     desc: desc
+    //   }
+
+    //   this.posts.push(newPost)
+    //   console.log(this.posts);
+      
+    //   this.username = ''
+    //   this.title = ''
+    //   this.desc = ''
+    //   this.hideContainer()
+    // },
     addPost(){
       const username = this.username
       const title = this.title
@@ -77,13 +96,22 @@ export default {
         desc: desc
       }
 
-      this.posts.push(newPost)
-      console.log(this.posts);
-      
+      fetch("http://localhost:3000/posts", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newPost)
+      })
+
+      console.log("check new post?", this.posts);
+
       this.username = ''
       this.title = ''
       this.desc = ''
       this.hideContainer()
+
+      this.getData()
     },
     async fetchData() {
         const URL = "http://localhost:3000/posts"
@@ -102,7 +130,7 @@ export default {
       console.log("fetched from getData", data);
 
       for (let index = 0; index < data.length; index++) {
-        this.posts.push(data[index])
+        this.posts.unshift(data[index])
       }
     },
   },
