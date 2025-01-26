@@ -22,11 +22,10 @@ export default {
   /* margin-top: 60px; */
 }
 
-/* body {
+body {
   margin: 0;
-  background-color: var(--primary-color);
   vertical-align: baseline;
-} */
+}
 
 ul {
   margin: 0;
