@@ -25,7 +25,7 @@
         <span>what are your cats doing now?</span>
       </div>
 
-      <div class="post" v-for="post in posts" :key="post">
+      <div class="post" v-for="(post) in posts" :key="post">
         <div class="post-profile">
           <a href="">{{ post.username }}</a>
         </div>
@@ -36,9 +36,9 @@
           <p>{{ post.desc }}</p>
         </div>
         <div class="post-image"></div>
-        <div class="post-reaction">
-          <p><font-awesome-icon icon="fa-solid fa-heart" /> 6</p>
-          <!-- <p><font-awesome-icon icon="fa-regular fa-heart" /></p> -->
+        <div class="post-reaction" @click="likePost(post.id)">
+          <p v-show="liked"><font-awesome-icon icon="fa-solid fa-heart" /> 6</p>
+          <p v-show="!liked"><font-awesome-icon icon="fa-regular fa-heart" /> 6 </p>
         </div>
       </div>
     </div>
@@ -54,7 +54,8 @@ export default {
       posts: [],
       username: 'jegie',
       title: '',
-      desc: ''
+      desc: '',
+      liked: false
     }
   },
   methods: {
@@ -65,6 +66,11 @@ export default {
     showContainer(){
       this.hideNewPost = true
       document.body.style.position = "fixed";
+    },
+    likePost(id){
+      console.log("post id", id);
+      
+      this.liked = !this.liked
     },
     // addPost(){
     //   const username = this.username
