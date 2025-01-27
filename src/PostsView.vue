@@ -55,6 +55,7 @@ export default {
       username: 'jegie',
       title: '',
       desc: '',
+      likeCount: '',
       liked: false
     }
   },
@@ -71,6 +72,11 @@ export default {
       console.log("post id", id);
       
       this.liked = !this.liked
+
+      let likedPost = this.posts.filter(post => post.id == id )
+
+      console.log(likedPost);
+      
     },
     // addPost(){
     //   const username = this.username
