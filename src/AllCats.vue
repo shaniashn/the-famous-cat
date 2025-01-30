@@ -16,8 +16,10 @@
           <p><span>0</span> likes</p>
         </div>
         <div class="blank">
-          <img src="./assets/blankcat.svg" alt="">
-          <h3>+ add more</h3>
+          <router-link to="/add-new">
+            <img src="./assets/blankcat.svg" alt="">
+            <h3>+ add more</h3>
+          </router-link>
         </div>
       </div>
     </div>
@@ -79,5 +81,10 @@ hr {
 
 .all-cats {
   display: flex;
+}
+
+.blank a{
+  text-decoration: none;
+  color: #2c3e50;
 }
 </style>
