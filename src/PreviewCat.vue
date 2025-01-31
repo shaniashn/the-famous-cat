@@ -52,7 +52,6 @@ h5 {
 }
 
 .preview-container {
-  width: 50%;
   text-align: start;
   display: grid;
   row-gap: 10%;

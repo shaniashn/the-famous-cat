@@ -23,7 +23,10 @@
         </div>
       </div>
     </div>
-    <PreviewPage />
+   <div class="preview" >
+    <span @click="openPreviewMenu"><font-awesome-icon icon="fa-solid fa-bars" /></span>
+    <PreviewPage v-show="openPreview"/>
+   </div>
   </div>
 </template>
 
@@ -34,6 +37,23 @@ export default {
   name: 'AllCats',
   components: {
     PreviewPage
+  },
+  data() {
+    return {
+      openPreview: false
+    }
+  },
+  methods: {
+    openPreviewMenu(){
+      this.openPreview = true
+    }
+  },
+  watch: {
+    openPreview(newValue){
+      if(newValue){
+        document.querySelector('.preview').querySelector('span').innerHTML = `<font-awesome-icon icon="fa-solid fa-xmark" />`
+      }
+    }
   }
 }
 </script>
@@ -56,6 +76,10 @@ h3, .card p{
 hr {
   border-bottom: 0px solid #898989;
   margin: 0 50px;
+}
+
+.welcome {
+  width: 100%;
 }
 
 .cats-gallery {
@@ -86,5 +110,10 @@ hr {
 .blank a{
   text-decoration: none;
   color: #2c3e50;
+}
+
+.preview {
+  width: 50%;
+  transform: translateX(0);
 }
 </style>
