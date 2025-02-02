@@ -24,10 +24,12 @@
       </div>
     </div>
    <div class="preview" >
-    <span @click="openPreviewMenu"><font-awesome-icon icon="fa-solid fa-bars" /></span>
+    <span @click="openPreviewMenu" v-show="!openPreview"><font-awesome-icon icon="fa-solid fa-bars" /></span>
+    <span @click="openPreviewMenu" v-show="openPreview"><font-awesome-icon icon="fa-solid fa-xmark" /></span>
     <PreviewPage v-show="openPreview"/>
    </div>
   </div>
+  
 </template>
 
 <script>
@@ -45,15 +47,10 @@ export default {
   },
   methods: {
     openPreviewMenu(){
-      this.openPreview = true
+      this.openPreview = !this.openPreview
     }
   },
   watch: {
-    openPreview(newValue){
-      if(newValue){
-        document.querySelector('.preview').querySelector('span').innerHTML = `<font-awesome-icon icon="fa-solid fa-xmark" />`
-      }
-    }
   }
 }
 </script>
