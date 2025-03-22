@@ -4,31 +4,8 @@
       "name": "kongkong",
       "age": "2",
       "breed": "domestic",
-      "gender": "female",
+      "hates": "spinach",
       "hobby": "knead dough"
-    },
-    {
-      "name": "jello",
-      "age": "1",
-      "breed": "persian",
-      "gender": "female",
-      "hobby": "hunting"
-    },
-    {
-      "id": "7b2f",
-      "name": "jiggy",
-      "age": "0,5",
-      "breed": "persian",
-      "gender": "female",
-      "hobby": "squeaking"
-    },
-    {
-      "id": "b27c",
-      "name": "jiggy",
-      "age": "0,5",
-      "breed": "persian",
-      "gender": "female",
-      "hobby": "squeaking"
     }
   ],
   "posts": [
