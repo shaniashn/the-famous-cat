@@ -6,18 +6,18 @@
       <hr>
       <div class="cats-gallery">
         <div class="card">
-          <img src="./assets/cats/peace-cat.png" alt="">
+          <img src="./assets/images/cats/peace-cat.png" alt="">
           <h3>tabby</h3>
           <p><span>0</span> likes</p>
         </div>
         <div class="card">
-          <img src="./assets/cats/rawr-cat.png" alt="">
+          <img src="./assets/images/cats/rawr-cat.png" alt="">
           <h3>roare</h3>
           <p><span>0</span> likes</p>
         </div>
         <div class="blank">
           <router-link to="/add-new">
-            <img src="./assets/blankcat.svg" alt="">
+            <img src="./assets/images/blankcat.svg" alt="">
             <h3>+ add more</h3>
           </router-link>
         </div>

@@ -1,15 +1,15 @@
-import HomePage from './HomePage.vue';
+import WelcomePage from './WelcomePage.vue';
 import SignUp from './SignUp.vue';
 import AllCats from './AllCats.vue';
-import AddCat from './AddCat.vue';
+import AddCatPage from './AddCatPage.vue';
 import FeedsPage from './FeedsPage.vue';
 // import PreviewCat from './PreviewCat.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
-    name: 'HomePage',
-    component: HomePage,
+    name: 'WelcomePage',
+    component: WelcomePage,
     path: '/'
   },
   {
@@ -23,8 +23,8 @@ const routes = [
     path: '/all-cats'
   },
   {
-    name: 'AddCat',
-    component: AddCat,
+    name: 'AddCatPage',
+    component: AddCatPage,
     path: '/add-new'
   },
   {

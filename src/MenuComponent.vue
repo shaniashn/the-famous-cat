@@ -1,6 +1,6 @@
 <template>
   <div class="menu-wrapper">
-    <img src="./assets/cats/rawr-cat.png" alt="profile-image">
+    <img src="./assets/images/cats/rawr-cat.png" alt="profile-image">
     <h3>shane</h3>
     <span>@shanshine</span>
     <div class="menu-opt">

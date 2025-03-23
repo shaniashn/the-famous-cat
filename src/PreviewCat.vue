@@ -1,7 +1,7 @@
 <template>
   <div class="preview-container">
     <div class="cat-thumbnail">
-      <img src="./assets/cats/peace-cat.png" alt="">
+      <img src="./assets/images/cats/peace-cat.png" alt="">
       <h2>jiggy</h2>
       <h6><span><font-awesome-icon icon="fa-solid fa-trophy" /></span> 3rd</h6>
     </div>
