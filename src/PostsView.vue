@@ -126,6 +126,7 @@ export default {
       this.getData()
     },
     async fetchData() {
+       try {
         const URL = "http://localhost:3000/posts"
         let fetchedData = await fetch(URL);
 
@@ -135,7 +136,12 @@ export default {
           throw new Error("Data fetching error.");
         }
 
+        // this.posts = fetchedData.json();
+
         return fetchedData.json();
+       } catch (err) {
+        console.error()
+       }
     },
     async getData() {
       const data = await this.fetchData();
