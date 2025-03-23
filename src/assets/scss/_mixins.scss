@@ -1,6 +1,15 @@
 @import './variables';
 
-@mixin border-style {
+@mixin border-style-big {
   border: $borderline;
   border-radius: 10pt;
+}
+
+@mixin border-style-small {
+  border: $borderline;
+  border-radius: 5pt;
+}
+
+@mixin page-title-h1 {
+  margin: 25px 0;
 }

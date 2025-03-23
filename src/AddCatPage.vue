@@ -1,28 +1,32 @@
 <template>
   <div class="catform">
     <h1>new cat</h1>
-  <div class="container-form-cat">
-    <div class="form">
-      <form @submit.prevent="postForm()">
-        <label for="name">name</label>
-        <input v-model="catName" type="text" id="name" placeholder="jello">
-        <label for="age">age</label>
-        <input v-model="catAge" type="text" id="age" placeholder="5">
-        <label for="breed">breed</label>
-        <input v-model="catBreed" type="text" id="breed" placeholder="persian">
-        <label for="hobby">hobby of your cat</label>
-        <input v-model="catHobby" type="text" id="hobby" placeholder="plays with grandma's knit kit">
-        <label for="gender">hates</label>
-        <input v-model="catHates" type="text" id="gender" placeholder="female">
-        <button type="submit">save</button>
-      </form>
+    <div class="container-form-cat">
+      <div class="cat-info-form">
+        <h3>cat information</h3>
+        <div class="form">
+          <form @submit.prevent="postForm()">
+            <label for="name">name</label>
+            <input v-model="catName" type="text" id="name" placeholder="jello">
+            <label for="age">age</label>
+            <input v-model="catAge" type="text" id="age" placeholder="5">
+            <label for="breed">breed</label>
+            <input v-model="catBreed" type="text" id="breed" placeholder="persian">
+            <label for="hobby">hobby of your cat</label>
+            <input v-model="catHobby" type="text" id="hobby" placeholder="plays with grandma's knit kit">
+            <label for="gender">hates</label>
+            <input v-model="catHates" type="text" id="gender" placeholder="female">
+            <button type="submit">save</button>
+          </form>
+        </div>
+      </div>
       <div class="image-form">
+        <h3>cat picture</h3>
         <img @click="logFile()" src="./assets/images/blankcat.svg">
         <label for="input-file">upload picture</label>
         <input id="input-file" type="file" accept=".png, .jpeg, .jpg, .svg">
       </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -40,14 +44,14 @@ export default {
     }
   },
   methods: {
-    logFile(){
+    logFile() {
       const files = document.getElementById('input-file').files;
       console.log("files ", files);
       const img = document.getElementsByTagName('img')[0];
       img.src = URL.createObjectURL(files[0]);
-      
+
     },
-    postForm(){
+    postForm() {
       let cat = {
         name: this.catName,
         age: this.catAge,
@@ -68,34 +72,51 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './assets/scss/variables';
+// @import './assets/scss/variables';
+// @import './assets/scss/variables';
 
 .catform {
   padding: 3% 10%;
 
   h1 {
+    @include page-title-h1;
     text-align: start;
-    margin: 0;
   }
 
   .container-form-cat {
-    border: $borderline;
-    border-radius: 5pt;
+    @include border-style-small;
     padding: 3%;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+
+    .cat-info-form {
+      width: 50%;
+    }
 
     button {
       justify-self: center;
     }
-    
+
     .form {
+      width: 100%;
       gap: 100px;
-      display: grid;
+      display: inline;
       grid-template-columns: 1fr 1fr;
     }
   }
 }
 
+.cat-info-form,
+.image-form {
+  h3 {
+    text-align: start;
+    margin: 20px 0;
+  }
+}
+
 .form {
+
   label,
   input {
     display: block;
@@ -107,20 +128,30 @@ export default {
   }
 
   input {
+    @include border-style-small;
     margin-bottom: 15px;
     min-height: 40px;
     min-width: 100%;
-    border: $borderline;
+    // border: $borderline;
     padding: 0 3%;
+    // box-sizing: border-box;
   }
 }
 
 .image-form {
   max-width: 50%;
   justify-self: center;
-  
+  text-align: start;
+
   & img {
-    margin-bottom: 25x;
+    padding-top: 25px;
+    width: 70%;
+  }
+
+  input,
+  label {
+    margin: 5px;
+    display: block;
   }
 }
 
