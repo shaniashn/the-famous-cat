@@ -1,0 +1,6 @@
+@import './variables';
+
+@mixin border-style {
+  border: $borderline;
+  border-radius: 10pt;
+}
