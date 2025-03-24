@@ -153,7 +153,7 @@ export default {
     },
   },
   mounted() {
-    // this.getData()
+    this.getData()
   }
 }
 </script>
@@ -165,12 +165,14 @@ export default {
 
 .feeds{
   width: 100%;
-  display: grid;
+  // display: grid;
   margin: 25px 50px 0 50px;
+  position: absolute;
 }
 
 .feeds-type {
   margin-bottom: 25px;
+  justify-self: flex-start;
 }
 
 .feeds-type span{
