@@ -153,12 +153,12 @@ export default {
     },
   },
   mounted() {
-    this.getData()
+    // this.getData()
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .feeds h1 {
   text-align: start;
 }
@@ -269,9 +269,10 @@ export default {
 }
 
 .post-preview {
+  @include border-style-small;
   padding: 25px;
-  border: 0.5px solid #898989;
-  border-radius: 5px;
+  /* border: 0.5px solid #898989;
+  border-radius: 5px; */
   display: flex;
  }
 
