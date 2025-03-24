@@ -36,10 +36,13 @@ h3 {
 }
 
 .menu-wrapper {
-  width: 80%;
-  margin: 4% 0;
+  display: block;
+  width: 30%;
+  padding: 4% 0;
   border-right: 0.5px solid #898989;
-  height: 100%;
+  // height: 100%;
+  position: fixed;
+  background-color: aqua;
 
   &.hide {
     transform: translateX(-150%);
