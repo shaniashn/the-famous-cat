@@ -30,25 +30,25 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 h3 {
   margin: 5px 0;
 }
 
-.menu-wrapper.hide {
-  transform: translateX(-150%);
-  display: none;
-}
-
 .menu-wrapper {
-  width: 50%;
+  width: 80%;
   margin: 4% 0;
   border-right: 0.5px solid #898989;
   height: 100%;
-}
 
-.menu-wrapper img {
-  max-width: 30%;
+  &.hide {
+    transform: translateX(-150%);
+    display: none;
+  }
+
+  img {
+    max-width: 50%;
+  }
 }
 
 .menu-opt {
