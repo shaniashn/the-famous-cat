@@ -40,6 +40,7 @@ export default {
       catBreed: '',
       catHates: '',
       catHobby: '',
+      catImage: '',
       cats: [],
     }
   },
