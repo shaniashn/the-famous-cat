@@ -5,7 +5,8 @@
       "age": "2",
       "breed": "domestic",
       "hates": "spinach",
-      "hobby": "knead dough"
+      "hobby": "knead dough",
+      "id": "dc8b"
     }
   ],
   "posts": [
@@ -57,6 +58,12 @@
       "username": "jegie",
       "title": "kongkong bites her toy",
       "desc": "kongkong seems to really excited to her toy that he had to bite it! :DD"
+    },
+    {
+      "id": "7618",
+      "username": "jegie",
+      "title": "kongieee",
+      "desc": "my kongie's v cuteeee"
     }
   ]
 }
